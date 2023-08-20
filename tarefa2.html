@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            grid-template-areas: 
+                "sidebar meio";
+            grid-template-columns: 20% 80%;
+            grid-template-rows: 100%;
+        }
+
+        .sidebar {
+            background-color: blue;
+            grid-area: sidebar;
+        }
+
+        .meio {
+            display: grid;
+            grid-template-areas: 
+                "topo"
+                "conteudo"
+                "rodape";
+            grid-template-columns: 100%;
+            grid-template-rows: 10% 80% 10%;
+            grid-area: meio;
+        }
+
+        .topo {
+            background-color: yellow;
+            grid-area: topo;
+        }
+
+        .conteudo {
+            background-color: green;
+            grid-area: conteudo;
+        }
+
+        .rodape {
+            background-color: pink;
+            grid-area: rodape;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">sidebar</div>
+        <div class="meio">
+            <div class="topo">topo</div>
+            <div class="conteudo">conteudo</div>
+            <div class="rodape">rodape</div>
+        </div>
+    </div>
+</body>
+</html>
